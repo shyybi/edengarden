@@ -114,7 +114,7 @@ def start_game():
         camera_x = player_pos.x - screen_width // 2
         camera_y = player_pos.y - screen_width // 2
  
-        current_sprite = current_anim[current_sprite_index]
+        current_sprite = [current_sprite_index]
         player_sprite = pygame.transform.scale(current_sprite, sprite_size)
         sprite_rect = player_sprite.get_rect(center=(screen_width // 2, screen_height // 2))
         screen.blit(player_sprite, sprite_rect)
