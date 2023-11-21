@@ -25,11 +25,13 @@ font = pygame.font.Font(None, 36)
 
 game_title = font.render("EdenGarden", True, BLACK)
 solo_text = font.render("Play", True, BLACK)
-multi_text = font.render("Github", True, BLACK)
+git_text = font.render("Github", True, BLACK)
+credit_text = font.render("Credits", True, BLACK)
 
 solo_rect = solo_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 50))
-multi_rect = multi_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+multi_rect = git_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
 menu_running = True
+
 while menu_running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -47,10 +49,9 @@ while menu_running:
     # Affichage du menu
     screen.blit(background_image, (0, 0))
     screen.blit(game_title, (SCREEN_WIDTH // 2 - game_title.get_width() // 2, 50))
-    pygame.draw.rect(screen, WHITE, solo_rect, 1)
-    pygame.draw.rect(screen, BLACK, multi_rect, 2)
+
     screen.blit(solo_text, solo_rect.topleft)
-    screen.blit(multi_text, multi_rect.topleft)
+    screen.blit(git_text, multi_rect.topleft)
     pygame.display.flip()
 
 pygame.quit()

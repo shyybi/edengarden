@@ -15,27 +15,24 @@ def start_game():
     anim_top = [
         pygame.image.load("character/top/top2.png"),
         pygame.image.load("character/top/top3.png")
-        # ... Ajoutez les autres images ici ...
     ]
     anim_bot = [
         pygame.image.load("character/bot/bot1.png"),
         pygame.image.load("character/bot/bot2.png")
-        # ... Ajoutez les autres images ici ...
     ]
     anim_right = [
         pygame.image.load("character/right/right1.png"),
         pygame.image.load("character/right/right2.png")
-        # ... Ajoutez les autres images ici ...
     ]
     anim_left = [
         pygame.image.load("character/left/left1.png"),
         pygame.image.load("character/left/left2.png")
-        # ... Ajoutez les autres images ici ...
+        
     ]
-    sprite_size = (150, 150)  # Nouvelle taille du sprite
+    sprite_size = (150, 150)  
     player_sprite = pygame.transform.scale(anim_top[current_sprite_index], sprite_size)
 
-    player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)  # Initialisation de player_pos
+    player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)  
     player_speed = 250
     last_sprite_change_position = player_pos.y
     last_sprite_change_time = time.time()
@@ -114,10 +111,7 @@ def start_game():
         camera_x = player_pos.x - screen_width // 2
         camera_y = player_pos.y - screen_width // 2
  
-        current_sprite = [current_sprite_index]
-        player_sprite = pygame.transform.scale(current_sprite, sprite_size)
-        sprite_rect = player_sprite.get_rect(center=(screen_width // 2, screen_height // 2))
-        screen.blit(player_sprite, sprite_rect)
+
 
         pygame.display.flip()
 
