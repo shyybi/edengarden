@@ -7,6 +7,8 @@ import os
 
 pygame.init()
 
+pygame_icon = pygame.image.load('fb.jpg')
+pygame.display.set_icon(pygame_icon)
 
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720

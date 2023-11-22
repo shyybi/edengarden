@@ -40,6 +40,9 @@ def start_game():
     last_sprite_change_position_x = player_pos.x
     last_sprite_change_time_x = time.time()
 
+    font = pygame.font.Font(None, 36)
+    BLACK = (0, 0, 0)
+    menu_title = font.render("Menu", True, BLACK)
 
 
     while running:
@@ -106,7 +109,8 @@ def start_game():
                 current_sprite_index = (current_sprite_index + 1) % len(anim_right)
                 player_sprite = pygame.transform.scale(anim_right[current_sprite_index], sprite_size)
 
-
+        if keys[pygame.K_ESCAPE]:
+            print('lol')
 
         camera_x = player_pos.x - screen_width // 2
         camera_y = player_pos.y - screen_width // 2
