@@ -1,3 +1,5 @@
+from maps import *
+from pytmx.util_pygame import load_pygame
 def start_game():
     import pygame
     import time
@@ -8,8 +10,10 @@ def start_game():
     screen = pygame.display.set_mode((screen_width, screen_height))
     clock = pygame.time.Clock()
     running = True
-    dt = 0
 
+    ### ANIMATION OF CHARACTER
+
+    dt = 0
     current_sprite_index = 0
 
     anim_top = [
@@ -40,6 +44,11 @@ def start_game():
     last_sprite_change_position_x = player_pos.x
     last_sprite_change_time_x = time.time()
 
+    ### MAP SETTING
+    map()
+    
+    ### GAME INIT
+
     font = pygame.font.Font(None, 36)
     BLACK = (0, 0, 0)
     menu_title = font.render("Menu", True, BLACK)
@@ -50,7 +59,7 @@ def start_game():
             if event.type == pygame.QUIT:
                 running = False
 
-        screen.fill("#467532")
+        screen.fill("black")
         
         sprite_rect = player_sprite.get_rect(center=player_pos)
         screen.blit(player_sprite, sprite_rect)
@@ -110,7 +119,9 @@ def start_game():
                 player_sprite = pygame.transform.scale(anim_right[current_sprite_index], sprite_size)
 
         if keys[pygame.K_ESCAPE]:
-            print('lol')
+            print('Leaving the Game')
+            menu()
+
 
         camera_x = player_pos.x - screen_width // 2
         camera_y = player_pos.y - screen_width // 2

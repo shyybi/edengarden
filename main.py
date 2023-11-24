@@ -2,8 +2,8 @@ import pygame
 import sys
 from game import *
 import os
-
-
+from maps import *
+from pytmx.util_pygame import load_pygame
 
 pygame.init()
 

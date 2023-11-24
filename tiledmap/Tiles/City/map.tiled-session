@@ -3,8 +3,9 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "city.tmx",
+    "activeFile": "test_debug.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "Grass.tsx": {
@@ -16,35 +17,41 @@
             "scaleInEditor": 1
         },
         "city.tmx": {
-            "scale": 9.0586,
+            "scale": 3,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 10.652860265383168,
-                "y": -7.893051906475613
+                "x": -19.166666666666686,
+                "y": -40.5
             }
         },
         "fence.tsx": {
             "scaleInDock": 12.7428,
             "scaleInEditor": 1
+        },
+        "test_debug.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 132.66666666666663,
+                "y": 291.33333333333326
+            }
         }
     },
     "last.imagePath": "C:/Users/charl/Desktop/eden_garden/tiledmap/Tiles/City",
-    "map.fixedSize": false,
+    "map.fixedSize": true,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
-        "city.tmx",
-        "Grass_Leaves.tsx",
-        "fence.tsx",
-        "Grass.tsx"
+        "test_debug.tmx"
     ],
     "project": "map.tiled-project",
     "recentFiles": [
+        "test_debug.tmx",
+        "city.tmx",
         "Grass.tsx",
         "fence.tsx",
-        "Grass_Leaves.tsx",
-        "city.tmx"
+        "Grass_Leaves.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
